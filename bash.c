@@ -1,29 +1,34 @@
 
-4.
+//4.
 
 #!usr/bash
 
-cd /home/mdod | find '*~' | xargs -d '\n' -r rm
+find .  -type f -name '*~' | xargs -I {} rm -- {}
 
-5.
-
-cd /home/mdos | ls -tp | grep 'lab' 
+//5.
+#!usr/bash
+ls -t | head | grep $1
   
 6.
+#!/bin/bash
 cd /home/mdos | ls -t lab* | head -1
   
-7.
-
+//7.
+#!/bin/bash
 cd /home/mdos | sed 's/Eeyore/Klapouchy/g' lab04_7.txt
 
 8.
 
+sed  -n '/$1/,/$2/p' event.pdf > new_event.jpg
 9.
+#!usr/bash
 cd /home/mdos | sed 'a/JPEG/jpg/g' 
-11.
+
+//11.
+#!/bin/bash
 mail -s "Diablo" name_surname@student.pwr.edu.pl << "Diablo is alive!"
 
-12.
+//12.
 #!/bin/bash
 
 # skrypt sprawdzajacy okresowo, czy jest zalogowany uzytkownik o podanym loginie
@@ -55,5 +60,6 @@ echo -----------------
 mail -s "$1" name_surname@student.pwr.edu.pl << "Uzytkownik $1 jest zalogowany"
 
 exit 0
+
 
 
