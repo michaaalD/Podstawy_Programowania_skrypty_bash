@@ -31,6 +31,7 @@ for FILE in /home/mdos/*.jpgfind
 do
         cp $FILE /home/$USER/
 done 
+mogrify -resize 100% $2
 
 */
 
