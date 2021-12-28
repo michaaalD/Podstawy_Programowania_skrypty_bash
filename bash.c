@@ -15,7 +15,7 @@ cd /home/mdos | ls -t lab* | head -1
   
 //7.
 #!/bin/bash
-cd /home/mdos | sed 's/Eeyore/Klapouchy/g' lab04_7.txt
+cd /home/mdos | sed 's/Christopher/Krzysiu/g' /home/mdos/lab04_pliki/.. kubus.txt 
 
 8.
 
@@ -23,6 +23,16 @@ sed  -n '/$1/,/$2/p' event.pdf > new_event.jpg
 9.
 #!usr/bash
 cd /home/mdos | sed 'a/JPEG/jpg/g' 
+
+10.
+  
+#!/bin/bash
+for FILE in /home/mdos/*.jpgfind
+do
+        cp $FILE /home/$USER/
+done 
+
+*/
 
 //11.
 #!/bin/bash
