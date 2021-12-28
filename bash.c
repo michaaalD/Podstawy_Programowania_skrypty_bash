@@ -27,11 +27,19 @@ cd /home/mdos | sed 'a/JPEG/jpg/g'
 10.
   
 #!/bin/bash
-for FILE in /home/mdos/*.jpgfind
+echo Wskaz Katalog i podaj wymiary obrazu
+
+for i in '*JPEG'
 do
-        cp $FILE /home/$USER/
-done 
-mogrify -resize 100% $2
+  mv -- "$i" "${i/%.JPEG/.jpg}"
+done
+
+for i in '*PNG'
+do
+  mv -- "$i" "${i/%.PNG/.png}"
+done
+
+convert $f -resize $2x$3 example.png
 
 */
 
