@@ -6,22 +6,22 @@ cd $1
 
 for i in *JPEG
 do
-mv "$i" `echo "$i" | sed s/JPEG/jpg/` 
+mv $i $(echo $i | sed 's/JPEG/jpg/g')
 done
 
 for i in *PNG
 do
-mv "$i" `echo "$i" | sed s/PNG/png/` 
+mv $i $(echo $i | sed 's/PNG/png/g')
 done
 
 for i in *png
 do 
-mv "$i" `echo "$i" | sed s/ /_/` 
+mv $i $(echo $i | sed 's/ /_/g')
 done
 
-for i in *jpg 
+for i in *jpg
 do 
-mv "$i" `echo "$i" | sed s/ /_/` 
+mv $i $(echo $i | sed 's/ /_/g')
 done
 
 for i in *.png
@@ -36,5 +36,6 @@ done
 
 
 tar -cf archiwum_plikow.tar 
+
 
 
