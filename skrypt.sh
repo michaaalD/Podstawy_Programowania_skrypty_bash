@@ -24,15 +24,9 @@ do
 mv $i $(echo $i | sed 's/ /_/g')
 done
 
-for i in *.png
-do
-    convert "$i" -resize $2x$3
-done
+mogrify -resize $2% *.png
 
-for i in *.jpg
-do
-    convert "$i" -resize $2x$3
-done
+mogrify -resize $2% *.jpg
 
 
 tar -cf archiwum_plikow.tar 
