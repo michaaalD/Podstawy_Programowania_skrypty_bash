@@ -23,3 +23,7 @@ for i in *jpg
 do 
 mv "$i" `echo "$i" sed 's/ /_/'` 
 done
+
+mogrify -resize $2x$3 *.png
+mogrify -resize $2x$3 *.jpg
+
