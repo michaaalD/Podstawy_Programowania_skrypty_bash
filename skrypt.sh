@@ -35,4 +35,6 @@ do
 done
 
 
+tar -cf archiwum_plikow.tar 
+
 
