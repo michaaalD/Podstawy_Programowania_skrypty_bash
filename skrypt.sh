@@ -24,8 +24,15 @@ do
 mv "$i" `echo "$i" sed s/ /_/` 
 done
 
-mogrify -resize $2x$3 *.png
-mogrify -resize $2x$3 *.jpg
+for i in *.png
+do
+    convert "$i" -resize $2x$3
+done
+
+for i in *.jpg
+do
+    convert "$i" -resize $2x$3
+done
 
 
 
