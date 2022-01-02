@@ -19,7 +19,8 @@ cd /home/mdos | sed 's/Christopher/Krzysiu/g' /home/mdos/lab04_pliki/.. kubus.tx
 
 8.
 
-sed  -n '/$1/,/$2/p' event.pdf > new_event.jpg
+find .  -type f -name '$1'| sed '$2r $1'| mv "$1" "${1//.png/.jpg}
+  
 9.
 #!usr/bash
 cd /home/mdos | sed 'a/JPEG/jpg/g' 
